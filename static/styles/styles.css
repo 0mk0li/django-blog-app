@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: black;
+  color: whitesmoke;
+  font-family: sans-serif; /* Added a default font */
+  display: flex; /* Centers content vertically */
+  flex-direction: column; /* Ensures content flows top to bottom */
+}
+
+nav {
+  padding: 1rem;
+  background-color: #44b78b;
+  color: white;
+  font-size: 1.5rem; /* Slightly reduced nav font size */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between;
+  align-items: center; /* Vertically align items */
+}
+
+nav a {
+  /* Style nav links */
+  color: white;
+  margin: 0 1rem; /* Add some spacing between nav links */
+  font-size: 1.2rem; /* slightly reduce the size of the nav links*/
+}
+nav a:hover {
+  color: lightgray;
+}
+
+nav h1 {
+  /* Style the nav heading (likely a logo) */
+  font-size: 1.8rem;
+}
+
+main {
+  padding: 2rem; /* Increased padding */
+  flex-grow: 1; /* Allows main to take up available space */
+}
+
+section {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem; /* Increased gap */
+  max-width: 800px; /* Limits the width of the main content */
+  margin: 0 auto; /* Centers the main content horizontally */
+}
+
+h2 {
+  font-size: 2rem; /* Slightly reduced h2 size */
+  color: #44b78b; /* Added a color to h2 */
+  margin-bottom: 1rem; /* Added margin below h2 */
+  border-bottom: 1px solid #ddd; /* Added a subtle underline */
+  padding-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6; /* Improves readability */
+}
+
+a {
+  text-decoration: none;
+  color: #81dbb8;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+a:hover {
+  color: #52a57e; /* Darker color on hover */
+}
+
+/* Optional: Add some basic styling for lists if you have any */
+ul,
+ol {
+  list-style-type: disc; /* Or square, circle, etc. */
+  padding-left: 20px;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  max-height: 380px;
+  border-radius: 10px;
+  image-rendering: optimizeSpeed;
+}
+
+.form-with-validation {
+  font-size: 1rem;
+  padding: 2rem; /* Increased padding */
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem; /* Increased gap */
+  border: 1px solid #ddd; /* Added a border */
+  border-radius: 8px; /* Added rounded corners */
+  background-color: #111; /* Slightly darker background */
+}
+
+.form-with-validation div {
+  display: flex;
+  flex-flow: column;
+  gap: 0.75rem; /* Increased gap */
+}
+
+.form-with-validation label {
+  /* Added label styling */
+  font-weight: bold;
+  color: #81dbb8;
+}
+
+.form-with-validation input,
+.form-with-validation textarea, /* Added textarea styling */
+.form-with-validation select {
+  /* Added select styling */
+  padding: 0.5rem; /* Increased padding */
+  border: 1px solid #777; /* Added border */
+  border-radius: 4px; /* Added rounded corners */
+  background-color: #222; /* Slightly darker background */
+  color: whitesmoke;
+  max-width: 400px; /* Increased max-width */
+}
+
+.form-with-validation input:focus,
+.form-with-validation textarea:focus,
+.form-with-validation select:focus {
+  outline: none;
+  border-color: #44b78b; /* Highlight border on focus */
+  box-shadow: 0 0 5px rgba(68, 183, 139, 0.3); /* Add a subtle shadow */
+}
+
+.form-submit {
+  padding: 0.75rem 1.5rem; /* Increased padding */
+  border-radius: 5px; /* Adjusted border-radius */
+  background-color: #44b78b; /* Updated background color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  font-size: 1.1rem; /* Slightly increased font size */
+  width: auto; /* changed width to auto so it will change based on the content */
+}
+
+.form-submit:hover {
+  background-color: #38956f; /* Darker color on hover */
+}
+
+.helptext {
+  font-size: 0.9rem; /* Slightly reduced font size */
+  color: #aaa; /* Lighter color */
+  margin-left: 0.5rem; /* Reduced margin */
+}
+
+.helptext ul {
+  list-style-type: none;
+  padding: 0; /* Remove default padding */
+}
+
+.errorlist {
+  color: #f00;
+  margin-left: 0.5rem; /* Reduced margin */
+  font-size: 0.9rem; /* Reduced font size */
+}
+
+.errorlist li::marker {
+  content: "🚨 ";
+}
+
+.logout {
+  display: inline-block;
+}
+
+.logout-button {
+  font-size: 1.5rem; /* Reduced font size to fit nav better */
+  background-color: transparent; /* Use transparent instead of rgba for better compatibility */
+  border: none;
+  color: white; /* Set text color to white */
+  cursor: pointer; /* Make it look clickable */
+  padding: 0.5rem 1rem; /* Add some padding */
+  border-radius: 5px; /* Add some rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for both background and color */
+}
